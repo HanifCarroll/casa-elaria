@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface PurchaseModalProps {
   isOpen: boolean;
@@ -12,6 +12,7 @@ export default function PurchaseModal({ isOpen, onClose, productName }: Purchase
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,22 +29,43 @@ export default function PurchaseModal({ isOpen, onClose, productName }: Purchase
 
   const handleClose = () => {
     if (!isSubmitting) {
-      setEmail("");
-      setShowSuccess(false);
-      onClose();
+      setIsVisible(false);
+      setTimeout(() => {
+        setEmail("");
+        setShowSuccess(false);
+        onClose();
+      }, 200); // Wait for animation to complete
     }
   };
+
+  // Handle ESC key
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        handleClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEsc);
+      setIsVisible(true);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEsc);
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 transform transition-all">
+    <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-opacity duration-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 relative transform transition-all duration-200 ${isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
         {/* Close button */}
         <button
           onClick={handleClose}
           disabled={isSubmitting}
-          className="absolute right-4 top-4 text-olive-primary/60 hover:text-olive-dark transition-colors disabled:opacity-50"
+          className="absolute right-4 top-4 z-10 text-olive-primary/60 hover:text-olive-dark transition-colors disabled:opacity-50 cursor-pointer"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
