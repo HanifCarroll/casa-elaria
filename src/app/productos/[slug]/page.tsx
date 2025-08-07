@@ -14,7 +14,11 @@ const products = [
     name: "Jabón Líquido",
     price: "$8.500",
     image: "/brand-assets/Mockups/CasaElaria_MockUps_Packaging_botella-jabon-liquido.jpg",
-    gallery: ["/brand-assets/Mockups/CasaElaria_MockUps_Packaging_botella-jabon-liquido.jpg", "/product-assets/Jabon 2.png", "/product-assets/Jabon 3.png"],
+    gallery: [
+      "/brand-assets/Mockups/CasaElaria_MockUps_Packaging_botella-jabon-liquido.jpg",
+      "/product-assets/jabon-barra/Jabon 2.png",
+      "/product-assets/jabon-barra/Jabon 3.png"
+    ],
     description: "Nuestro Jabón Líquido combina la suavidad de la limpieza tradicional con los beneficios nutritivos del aceite de oliva sanjuanino. Formulado especialmente para el cuidado diario, respeta el pH natural de tu piel mientras la limpia profundamente.",
     benefits: [
       "Hidratación profunda sin sensación grasa",
@@ -32,8 +36,8 @@ const products = [
     slug: "shower-oil",
     name: "Shower Oil",
     price: "$12.000",
-    image: "/product-assets/Shower oil.png",
-    gallery: ["/product-assets/Shower oil.png"],
+    image: "/product-assets/shower-oil/Shower oil.png",
+    gallery: ["/product-assets/shower-oil/Shower oil.png"],
     description: "Una experiencia de baño transformadora que convierte tu rutina diaria en un ritual de bienestar. Nuestro Shower Oil nutre intensamente la piel mientras la limpia, dejándola sedosa y perfumada.",
     benefits: [
       "Nutrición intensa para piel muy seca",
@@ -51,8 +55,8 @@ const products = [
     slug: "jabon-en-barra",
     name: "Jabón en Barra",
     price: "$4.500",
-    image: "/product-assets/Jabon 2.png",
-    gallery: ["/product-assets/Jabon 2.png"],
+    image: "/product-assets/jabon-barra/Jabon 2.png",
+    gallery: ["/product-assets/jabon-barra/Jabon 2.png"],
     description: "Elaborado siguiendo técnicas artesanales tradicionales, nuestro Jabón en Barra representa la esencia pura del cuidado natural. Cada barra es única y contiene toda la riqueza del aceite de oliva sanjuanino.",
     benefits: [
       "Elaboración 100% artesanal y tradicional",

@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import HeroSlider from "./components/HeroSlider";
 import PurchaseModal from "./components/PurchaseModal";
+import ProductCard from "./components/ProductCard";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -96,74 +96,27 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-square relative">
-                <Image
-                  src="/product-assets/Jabon 1.png"
-                  alt="Jabón Líquido Casa Elaria"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="font-serif text-xl font-bold text-olive-dark mb-2">Jabón Líquido</h3>
-                <p className="text-olive-primary/80 text-sm mb-4">
-                  Limpieza suave con aceite de oliva. Hidrata y protege tu piel naturalmente.
-                </p>
-                <button 
-                  onClick={() => handlePurchase("Jabón Líquido")}
-                  className="w-full bg-olive-primary text-white py-3 px-4 rounded-md hover:bg-olive-dark transition-colors font-medium cursor-pointer"
-                >
-                  Comprar
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-square relative">
-                <Image
-                  src="/product-assets/Shower oil.png"
-                  alt="Shower Oil Casa Elaria"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="font-serif text-xl font-bold text-olive-dark mb-2">Shower Oil</h3>
-                <p className="text-olive-primary/80 text-sm mb-4">
-                  Experiencia de baño lujosa. Nutre profundamente mientras limpia.
-                </p>
-                <button 
-                  onClick={() => handlePurchase("Shower Oil")}
-                  className="w-full bg-olive-primary text-white py-3 px-4 rounded-md hover:bg-olive-dark transition-colors font-medium cursor-pointer"
-                >
-                  Comprar
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-square relative">
-                <Image
-                  src="/product-assets/Caja de jabones.png"
-                  alt="Jabón en Barra Casa Elaria"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="font-serif text-xl font-bold text-olive-dark mb-2">Jabón en Barra</h3>
-                <p className="text-olive-primary/80 text-sm mb-4">
-                  Tradición artesanal. Jabón sólido con todos los beneficios de la oliva.
-                </p>
-                <button 
-                  onClick={() => handlePurchase("Jabón en Barra")}
-                  className="w-full bg-olive-primary text-white py-3 px-4 rounded-md hover:bg-olive-dark transition-colors font-medium cursor-pointer"
-                >
-                  Comprar
-                </button>
-              </div>
-            </div>
+            <ProductCard
+              slug="jabon-liquido"
+              name="Jabón Líquido"
+              image="/brand-assets/Mockups/CasaElaria_MockUps_Packaging_botella-jabon-liquido.jpg"
+              description="Limpieza suave con aceite de oliva. Hidrata y protege tu piel naturalmente."
+              onAddToCart={handlePurchase}
+            />
+            <ProductCard
+              slug="shower-oil"
+              name="Shower Oil"
+              image="/product-assets/shower-oil/Shower oil.png"
+              description="Experiencia de baño lujosa. Nutre profundamente mientras limpia."
+              onAddToCart={handlePurchase}
+            />
+            <ProductCard
+              slug="jabon-en-barra"
+              name="Jabón en Barra"
+              image="/product-assets/jabon-barra/Caja de jabones.png"
+              description="Tradición artesanal. Jabón sólido con todos los beneficios de la oliva."
+              onAddToCart={handlePurchase}
+            />
           </div>
         </div>
       </section>
