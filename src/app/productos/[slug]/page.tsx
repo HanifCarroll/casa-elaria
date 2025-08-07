@@ -200,7 +200,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 </button>
                 <Link 
                   href="/productos"
-                  className="block w-full text-center bg-olive-primary/10 text-olive-dark py-4 px-8 rounded-md hover:bg-olive-primary/20 transition-colors font-medium"
+                  className="block w-full text-center border border-foreground text-foreground bg-white py-4 px-8 rounded-md hover:bg-cream transition-colors font-medium uppercase tracking-wider"
                 >
                   Ver Otros Productos
                 </Link>
@@ -211,7 +211,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* Product Details Tabs */}
-      <section className="py-16 bg-olive-primary/5">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

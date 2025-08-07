@@ -75,8 +75,9 @@ export default function ProductosPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-olive-primary/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 bg-cream overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/brand-assets/Patrones/Trama-lechuzas.jpg')] opacity-5 bg-cover bg-center" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl font-bold text-olive-dark mb-4">
               Los Beneficios del Aceite de Oliva

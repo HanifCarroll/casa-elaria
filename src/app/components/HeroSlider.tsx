@@ -14,7 +14,7 @@ import "swiper/css/effect-fade";
 const slides = [
   {
     id: 1,
-    image: "/product-assets/todos los productos.png",
+    image: "/product-assets/all-products/todos los productos.png",
     title: "Regalá consciencia, belleza y cuidado",
     subtitle: "Productos de cuidado personal derivados de la oliva sanjuanina. 100% natural, 100% argentino, 100% con propósito.",
     cta: "DESCUBRÍ NUESTROS PRODUCTOS",
@@ -22,7 +22,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/product-assets/Shower oil.png",
+    image: "/product-assets/shower-oil/Shower oil.png",
     title: "Experiencia sensorial única",
     subtitle: "Nuestro Shower Oil transforma tu baño en un ritual de bienestar con el poder nutritivo del aceite de oliva.",
     cta: "CONOCÉ SHOWER OIL",
@@ -30,7 +30,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "/product-assets/Caja de jabones.png",
+    image: "/product-assets/jabon-barra/Caja de jabones.png",
     title: "Tradición artesanal argentina",
     subtitle: "Jabones elaborados con técnicas tradicionales y los mejores aceites de oliva de San Juan.",
     cta: "VER COLECCIÓN",
@@ -90,7 +90,7 @@ export default function HeroSlider() {
                         </p>
                         <Link
                           href={slide.link}
-                          className="inline-block bg-white text-olive-dark px-8 sm:px-12 py-4 sm:py-5 text-xs sm:text-sm font-medium tracking-widest uppercase hover:bg-white/90 transition-colors border border-gold"
+                          className="inline-block bg-white text-olive-dark px-8 sm:px-12 py-4 sm:py-5 text-xs sm:text-sm font-medium tracking-widest uppercase hover:bg-white/90 transition-colors border border-foreground"
                         >
                           {slide.cta}
                         </Link>

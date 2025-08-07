@@ -59,8 +59,9 @@ export default function Home() {
       </section>
 
       {/* USP Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 bg-cream overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/brand-assets/Patrones/Trama-pajaros.jpg')] opacity-5 bg-cover bg-center" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-olive-dark mb-4">
               El poder nutritivo de la oliva sanjuanina

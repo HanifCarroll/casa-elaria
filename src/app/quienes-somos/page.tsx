@@ -37,7 +37,7 @@ export default function QuienesSomosPage() {
             <div className="relative">
               <div className="aspect-4/3 relative overflow-hidden rounded-lg">
                 <Image
-                  src="/product-assets/productos y packaging.png"
+                  src="/product-assets/all-products/productos y packaging.png"
                   alt="Casa Elaria - Productos y packaging"
                   fill
                   className="object-cover"
@@ -49,7 +49,7 @@ export default function QuienesSomosPage() {
       </section>
 
       {/* Our Values */}
-      <section className="py-16 bg-olive-primary/5">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl font-bold text-olive-dark mb-4">
@@ -61,8 +61,8 @@ export default function QuienesSomosPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6 bg-white rounded-xl">
-              <div className="w-16 h-16 bg-olive-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-6 bg-white rounded-xl border border-olive-primary/10 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-olive-primary/15 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-olive-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0 9c-5 0-9-4-9-9s4-9 9-9" />
                 </svg>
@@ -73,8 +73,8 @@ export default function QuienesSomosPage() {
               </p>
             </div>
             
-            <div className="text-center p-6 bg-white rounded-xl">
-              <div className="w-16 h-16 bg-olive-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-6 bg-white rounded-xl border border-olive-primary/10 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-olive-primary/15 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-olive-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>
@@ -85,8 +85,8 @@ export default function QuienesSomosPage() {
               </p>
             </div>
             
-            <div className="text-center p-6 bg-white rounded-xl">
-              <div className="w-16 h-16 bg-olive-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-6 bg-white rounded-xl border border-olive-primary/10 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-olive-primary/15 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-olive-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
@@ -97,8 +97,8 @@ export default function QuienesSomosPage() {
               </p>
             </div>
             
-            <div className="text-center p-6 bg-white rounded-xl">
-              <div className="w-16 h-16 bg-olive-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-6 bg-white rounded-xl border border-olive-primary/10 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-olive-primary/15 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-olive-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
