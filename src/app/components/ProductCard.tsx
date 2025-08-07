@@ -37,7 +37,7 @@ export default function ProductCard({
   return (
     <div
       onClick={handleCardClick}
-      className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500 cursor-pointer"
+      className="group bg-white rounded-xl overflow-hidden border border-olive-primary/10 shadow-sm hover:shadow-md transition-shadow duration-500 cursor-pointer"
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
@@ -92,7 +92,7 @@ export default function ProductCard({
 
         <button
           onClick={handleAddToCart}
-          className="w-full bg-olive-primary text-white py-3 px-4 rounded-md hover:bg-olive-dark transition-colors font-medium text-sm cursor-pointer"
+          className="w-full bg-olive-primary text-white py-3 px-4 rounded-md hover:bg-olive-dark transition-colors font-medium text-sm uppercase tracking-wider cursor-pointer"
         >
           Agregar Al Carrito
         </button>

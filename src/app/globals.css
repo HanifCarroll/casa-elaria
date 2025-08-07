@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #2d3e2d;
-  --olive-primary: #4a5d3a;
-  --olive-light: #8ba882;
-  --olive-dark: #2d3e2d;
-  --gold: #c19a6b;
-  --cream: #faf8f4;
+  /* Brand palette */
+  --background: #FFFFE6; /* Blanco Clara */
+  --foreground: #141402; /* Negro */
+  --olive-primary: #32470D; /* Verde Oliva */
+  --olive-light: #32470D; /* Verde Hoja (same value provided) */
+  --olive-dark: #141402; /* Map dark to Negro for text/footer */
+  --gold: #ECC957; /* Amarillo Yema */
+  --cream: #FFFFE6; /* Blanco Clara */
 }
 
 @theme inline {

@@ -90,7 +90,7 @@ export default function HeroSlider() {
                         </p>
                         <Link
                           href={slide.link}
-                          className="inline-block bg-white text-olive-dark px-8 sm:px-12 py-4 sm:py-5 text-xs sm:text-sm font-medium tracking-widest uppercase hover:bg-white/90 transition-colors"
+                          className="inline-block bg-white text-olive-dark px-8 sm:px-12 py-4 sm:py-5 text-xs sm:text-sm font-medium tracking-widest uppercase hover:bg-white/90 transition-colors border border-gold"
                         >
                           {slide.cta}
                         </Link>

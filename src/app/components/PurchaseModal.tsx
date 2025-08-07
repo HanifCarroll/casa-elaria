@@ -112,7 +112,7 @@ export default function PurchaseModal({ isOpen, onClose, productName }: Purchase
                 <button
                   type="submit"
                   disabled={isSubmitting || !email.trim()}
-                  className="w-full bg-olive-primary text-white py-3 px-6 rounded-lg hover:bg-olive-dark transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-olive-primary text-white py-3 px-6 rounded-lg hover:bg-olive-dark transition-colors font-medium uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Enviando..." : "Notificarme cuando esté disponible"}
                 </button>
@@ -139,7 +139,7 @@ export default function PurchaseModal({ isOpen, onClose, productName }: Purchase
               </p>
               <button
                 onClick={handleClose}
-                className="bg-olive-primary text-white py-3 px-8 rounded-lg hover:bg-olive-dark transition-colors font-medium"
+                className="bg-olive-primary text-white py-3 px-8 rounded-lg hover:bg-olive-dark transition-colors font-medium uppercase tracking-wider"
               >
                 Cerrar
               </button>

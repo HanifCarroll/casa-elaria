@@ -194,9 +194,9 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
               <div className="space-y-4 pt-6">
                 <button 
                   onClick={handlePurchase}
-                  className="w-full bg-olive-primary text-white py-4 px-8 rounded-md hover:bg-olive-dark transition-colors font-medium text-lg cursor-pointer"
+                  className="w-full bg-olive-primary text-white py-4 px-8 rounded-md hover:bg-olive-dark transition-colors font-medium text-lg uppercase tracking-wider cursor-pointer"
                 >
-                  Comprar - {product.price}
+                  Agregar Al Carrito - {product.price}
                 </button>
                 <Link 
                   href="/productos"
@@ -240,7 +240,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {products.filter(p => p.id !== product.id).slice(0, 2).map((relatedProduct) => (
-              <div key={relatedProduct.id} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <div key={relatedProduct.id} className="bg-white rounded-lg overflow-hidden border border-olive-primary/10 shadow-sm hover:shadow-md transition-shadow">
                 <div className="aspect-square relative">
                   <Image
                     src={relatedProduct.image}

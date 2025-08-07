@@ -16,6 +16,12 @@ This document provides a unified overview of the Casa Elaria brand, target audie
     - Sophistication
     - Conscious and ethical production (triple-impact)
     - Local identity with global projection
+- **Colors**:
+    - Verde Oliva - #32470D
+    - Amarillo Yema - #ECC957
+    - Blanco Clara - #FFFFE6
+    - Negro - #141402
+    - Verde Hoja - #32470D
 
 ## 2. Target Audience & Positioning
 

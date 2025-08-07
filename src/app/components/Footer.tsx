@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-olive-dark text-white">
+    <footer className="bg-olive-dark text-white border-t-4 border-gold">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
@@ -26,7 +26,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-white/80 hover:text-gold transition-colors"
                 >
                   Inicio
                 </Link>
@@ -34,7 +34,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/productos"
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-white/80 hover:text-gold transition-colors"
                 >
                   Productos
                 </Link>
@@ -42,7 +42,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/quienes-somos"
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-white/80 hover:text-gold transition-colors"
                 >
                   Quiénes Somos
                 </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contacto"
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-white/80 hover:text-gold transition-colors"
                 >
                   Contacto
                 </Link>
@@ -63,7 +63,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-white/80 hover:text-gold transition-colors"
                 >
                   Instagram
                 </a>
@@ -71,7 +71,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-white/80 hover:text-gold transition-colors"
                 >
                   Facebook
                 </a>
