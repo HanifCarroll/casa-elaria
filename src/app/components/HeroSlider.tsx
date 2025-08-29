@@ -20,6 +20,7 @@ const slides = [
       "Productos de cuidado personal derivados de la oliva sanjuanina. 100% natural, 100% argentino, 100% con propósito.",
     cta: "DESCUBRÍ NUESTROS PRODUCTOS",
     link: "/productos",
+    imagePosition: "center center",
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ const slides = [
       "Nuestro Aceite limpiador para ducha transforma tu baño en un ritual de bienestar con el poder nutritivo de la oliva.",
     cta: "CONOCÉ ACEITE LIMPIADOR",
     link: "/productos",
+    imagePosition: "center bottom",
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ const slides = [
       "Jabones elaborados con técnicas tradicionales y lo mejor de la oliva de San Juan.",
     cta: "VER COLECCIÓN",
     link: "/productos",
+    imagePosition: "center center",
   },
 ];
 
@@ -70,13 +73,8 @@ export default function HeroSlider() {
                   src={slide.image}
                   alt={slide.title}
                   fill
-                  className={`object-cover ${
-                    slide.id === 1
-                      ? "object-center"
-                      : slide.id === 3
-                      ? "object-center"
-                      : "object-bottom"
-                  }`}
+                  className="object-cover"
+                  style={{ objectPosition: slide.imagePosition }}
                   priority={slide.id === 1}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20"></div>
