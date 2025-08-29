@@ -14,28 +14,31 @@ import "swiper/css/effect-fade";
 const slides = [
   {
     id: 1,
-    image: "/product-assets/all-products/todos los productos.png",
+    image: "/product-assets/all-products/productos y packaging.png",
     title: "Regalá consciencia, belleza y cuidado",
-    subtitle: "Productos de cuidado personal derivados de la oliva sanjuanina. 100% natural, 100% argentino, 100% con propósito.",
+    subtitle:
+      "Productos de cuidado personal derivados de la oliva sanjuanina. 100% natural, 100% argentino, 100% con propósito.",
     cta: "DESCUBRÍ NUESTROS PRODUCTOS",
-    link: "/productos"
+    link: "/productos",
   },
   {
     id: 2,
     image: "/product-assets/shower-oil/Shower oil.png",
     title: "Experiencia sensorial única",
-    subtitle: "Nuestro Shower Oil transforma tu baño en un ritual de bienestar con el poder nutritivo del aceite de oliva.",
-    cta: "CONOCÉ SHOWER OIL",
-    link: "/productos"
+    subtitle:
+      "Nuestro Aceite limpiador para ducha transforma tu baño en un ritual de bienestar con el poder nutritivo de la oliva.",
+    cta: "CONOCÉ ACEITE LIMPIADOR",
+    link: "/productos",
   },
   {
     id: 3,
     image: "/product-assets/jabon-barra/Caja de jabones.png",
     title: "Tradición artesanal argentina",
-    subtitle: "Jabones elaborados con técnicas tradicionales y los mejores aceites de oliva de San Juan.",
+    subtitle:
+      "Jabones elaborados con técnicas tradicionales y lo mejor de la oliva de San Juan.",
     cta: "VER COLECCIÓN",
-    link: "/productos"
-  }
+    link: "/productos",
+  },
 ];
 
 export default function HeroSlider() {
@@ -68,9 +71,11 @@ export default function HeroSlider() {
                   alt={slide.title}
                   fill
                   className={`object-cover ${
-                    slide.id === 1 ? 'object-top' : 
-                    slide.id === 3 ? 'object-bottom' : 
-                    'object-center'
+                    slide.id === 1
+                      ? "object-center"
+                      : slide.id === 3
+                      ? "object-center"
+                      : "object-bottom"
                   }`}
                   priority={slide.id === 1}
                 />
@@ -106,13 +111,33 @@ export default function HeroSlider() {
 
       {/* Custom Navigation Arrows */}
       <button className="hero-swiper-button-prev absolute left-6 lg:left-12 top-1/2 transform -translate-y-1/2 z-30 text-white/70 hover:text-white transition-all duration-300 hover:scale-110 hidden sm:flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20">
-        <svg className="w-6 h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
+        <svg
+          className="w-6 h-6 lg:w-8 lg:h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M15 19l-7-7 7-7"
+          />
         </svg>
       </button>
       <button className="hero-swiper-button-next absolute right-6 lg:right-12 top-1/2 transform -translate-y-1/2 z-30 text-white/70 hover:text-white transition-all duration-300 hover:scale-110 hidden sm:flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20">
-        <svg className="w-6 h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+        <svg
+          className="w-6 h-6 lg:w-8 lg:h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M9 5l7 7-7 7"
+          />
         </svg>
       </button>
 
@@ -127,7 +152,7 @@ export default function HeroSlider() {
           opacity: 1;
           transition: all 0.3s ease;
         }
-        
+
         .hero-swiper-pagination .swiper-pagination-bullet-active {
           background: rgba(255, 255, 255, 1);
           transform: scale(1.2);

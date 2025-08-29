@@ -180,21 +180,11 @@ export default function ContactoPage() {
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <svg className="w-5 h-5 text-olive-primary mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <div>
-                      <p className="font-medium text-olive-dark">Email</p>
-                      <p className="text-olive-primary/80">hola@casaelaria.com</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start">
-                    <svg className="w-5 h-5 text-olive-primary mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                     <div>
                       <p className="font-medium text-olive-dark">Teléfono</p>
-                      <p className="text-olive-primary/80">+54 264 123-4567</p>
+                      <p className="text-olive-primary/80">+57 (311) 645-0891</p>
                     </div>
                   </div>
 
@@ -211,33 +201,6 @@ export default function ContactoPage() {
                 </div>
               </div>
 
-              {/* Business Hours */}
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h3 className="font-serif text-xl font-bold text-olive-dark mb-6">
-                  Horarios de Atención
-                </h3>
-                
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-olive-primary/80">Lunes - Viernes</span>
-                    <span className="font-medium text-olive-dark">9:00 - 18:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-olive-primary/80">Sábados</span>
-                    <span className="font-medium text-olive-dark">10:00 - 14:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-olive-primary/80">Domingos</span>
-                    <span className="font-medium text-olive-dark">Cerrado</span>
-                  </div>
-                </div>
-
-                <div className="mt-6 pt-6 border-t border-olive-primary/10">
-                  <p className="text-sm text-olive-primary/70">
-                    Tiempo de respuesta estimado: 24-48 horas en días hábiles
-                  </p>
-                </div>
-              </div>
 
               {/* Social Media */}
               <div className="bg-white rounded-lg shadow-lg p-8">

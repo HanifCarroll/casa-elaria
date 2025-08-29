@@ -37,7 +37,7 @@ export default function ProductCard({
   return (
     <div
       onClick={handleCardClick}
-      className="group bg-white rounded-xl overflow-hidden border border-olive-primary/10 shadow-sm hover:shadow-md transition-shadow duration-500 cursor-pointer"
+      className="group bg-white rounded-xl overflow-hidden border border-olive-primary/10 shadow-sm hover:shadow-md transition-shadow duration-500 cursor-pointer h-full flex flex-col"
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
@@ -57,7 +57,7 @@ export default function ProductCard({
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
       </div>
 
-      <div className="p-6">
+      <div className="p-6 flex-1 flex flex-col">
         <div className="flex justify-between items-start mb-3">
           <h3 className="font-serif text-xl font-bold text-olive-dark">{name}</h3>
           {price ? (
@@ -70,7 +70,7 @@ export default function ProductCard({
         ) : null}
 
         {benefits && benefits.length > 0 ? (
-          <ul className="text-xs text-olive-primary/70 mb-6 space-y-1">
+          <ul className="text-xs text-olive-primary/70 mb-6 space-y-1 flex-1">
             {benefits.map((benefit, index) => (
               <li key={index} className="flex items-center">
                 <svg
@@ -88,11 +88,11 @@ export default function ProductCard({
               </li>
             ))}
           </ul>
-        ) : null}
+        ) : <div className="flex-1" />}
 
         <button
           onClick={handleAddToCart}
-          className="w-full bg-olive-primary text-white py-3 px-4 rounded-md hover:bg-olive-dark transition-colors font-medium text-sm uppercase tracking-wider cursor-pointer"
+          className="w-full bg-olive-primary text-white py-3 px-4 rounded-md hover:bg-olive-dark transition-colors font-medium text-sm uppercase tracking-wider cursor-pointer mt-auto"
         >
           Agregar Al Carrito
         </button>

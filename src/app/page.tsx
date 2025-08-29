@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import HeroSlider from "./components/HeroSlider";
 import PurchaseModal from "./components/PurchaseModal";
@@ -27,8 +26,8 @@ export default function Home() {
               Nuestros Productos
             </h2>
             <p className="text-lg text-olive-primary/80 max-w-2xl mx-auto mb-8">
-              Una experiencia sensorial completa basada en los principios del triple impacto 
-              y la economía circular.
+              Una experiencia sensorial completa basada en los principios del
+              triple impacto y la economía circular.
             </p>
           </div>
 
@@ -37,12 +36,12 @@ export default function Home() {
               slug="jabon-liquido"
               name="Jabón Líquido"
               image="/brand-assets/Mockups/CasaElaria_MockUps_Packaging_botella-jabon-liquido.jpg"
-              description="Limpieza suave con aceite de oliva. Hidrata y protege tu piel naturalmente."
+              description="Limpieza suave de la oliva. Hidrata y protege tu piel naturalmente."
               onAddToCart={handlePurchase}
             />
             <ProductCard
               slug="shower-oil"
-              name="Shower Oil"
+              name="Aceite limpiador para ducha"
               image="/product-assets/shower-oil/Shower oil.png"
               description="Experiencia de baño lujosa. Nutre profundamente mientras limpia."
               onAddToCart={handlePurchase}
@@ -67,56 +66,99 @@ export default function Home() {
               El poder nutritivo de la oliva sanjuanina
             </h2>
             <p className="text-lg text-olive-primary/80 max-w-2xl mx-auto">
-              Creamos productos que cuidan la piel y al mismo tiempo promueven un consumo consciente, 
-              combinando belleza, bienestar y responsabilidad.
+              Creamos productos que cuidan la piel y al mismo tiempo promueven
+              un consumo consciente, combinando belleza, bienestar y
+              responsabilidad.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-8 bg-white border border-olive-primary/10 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="w-16 h-16 bg-olive-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-olive-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                <svg
+                  className="w-8 h-8 text-olive-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
                 </svg>
               </div>
-              <h3 className="font-serif text-xl font-bold text-olive-dark mb-4">100% Natural</h3>
+              <h3 className="font-serif text-xl font-bold text-olive-dark mb-4">
+                100% Natural
+              </h3>
               <p className="text-olive-primary/80">
-                Ingredientes naturales derivados de la oliva, sin químicos dañinos. 
-                Cuidamos tu piel respetando su naturaleza.
+                Ingredientes naturales derivados de la oliva, sin químicos
+                dañinos. Cuidamos tu piel respetando su naturaleza.
               </p>
             </div>
-            
+
             <div className="text-center p-8 bg-white border border-olive-primary/10 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="w-16 h-16 bg-olive-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-olive-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                <svg
+                  className="w-8 h-8 text-olive-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
                 </svg>
               </div>
-              <h3 className="font-serif text-xl font-bold text-olive-dark mb-4">Economía Circular</h3>
+              <h3 className="font-serif text-xl font-bold text-olive-dark mb-4">
+                Origen Argentino
+              </h3>
               <p className="text-olive-primary/80">
-                Reutilizamos residuos de la industria olivícola, transformando desecho 
-                en productos de alta calidad con propósito.
+                Productos de San Juan, Argentina. Apoyamos la industria local y
+                celebramos la calidad de nuestros recursos naturales.
               </p>
             </div>
-            
+
             <div className="text-center p-8 bg-white border border-olive-primary/10 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="w-16 h-16 bg-olive-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-olive-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                <svg
+                  className="w-8 h-8 text-olive-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                  />
                 </svg>
               </div>
-              <h3 className="font-serif text-xl font-bold text-olive-dark mb-4">Origen Argentino</h3>
+              <h3 className="font-serif text-xl font-bold text-olive-dark mb-4">
+                Packaging Reutilizable
+              </h3>
               <p className="text-olive-primary/80">
-                Productos de San Juan, Argentina. Apoyamos la industria local 
-                y celebramos la calidad de nuestros recursos naturales.
+                En lugar de envases efímeros, diseñamos cajas metálicas
+                reutilizables: objetos hermosos, duraderos y funcionales que
+                podés conservar y usar en tu día a día.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <PurchaseModal 
+      <PurchaseModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         productName={selectedProduct}

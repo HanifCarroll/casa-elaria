@@ -153,50 +153,6 @@ export default function QuienesSomosPage() {
         </div>
       </section>
 
-      {/* Circular Economy */}
-      <section className="py-16 bg-olive-primary/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl font-bold text-olive-dark mb-6">
-            Economía Circular
-          </h2>
-          <p className="text-lg text-olive-primary/80 max-w-3xl mx-auto mb-12">
-            Revalorizamos los recursos naturales transformando residuos de la industria olivícola 
-            (carozos, aceites no extra vírgenes) en productos cosméticos de alta calidad.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-olive-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">1</span>
-              </div>
-              <h3 className="font-semibold text-olive-dark mb-2">Recolección</h3>
-              <p className="text-sm text-olive-primary/80">
-                Rescatamos subproductos de la industria olivícola que tradicionalmente se descartan
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-olive-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">2</span>
-              </div>
-              <h3 className="font-semibold text-olive-dark mb-2">Transformación</h3>
-              <p className="text-sm text-olive-primary/80">
-                Procesamos estos materiales con técnicas artesanales para crear productos únicos
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-olive-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">3</span>
-              </div>
-              <h3 className="font-semibold text-olive-dark mb-2">Valor</h3>
-              <p className="text-sm text-olive-primary/80">
-                Creamos productos de alta calidad que cuidan tu piel y el medio ambiente
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
     </div>
   );
