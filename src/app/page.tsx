@@ -4,10 +4,12 @@ import { useState } from "react";
 import HeroSlider from "./components/HeroSlider";
 import PurchaseModal from "./components/PurchaseModal";
 import ProductCard from "./components/ProductCard";
+import { getAllProducts } from "@/lib/products";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<string>("");
+  const products = getAllProducts();
 
   const handlePurchase = (productName: string) => {
     setSelectedProduct(productName);
@@ -32,27 +34,16 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ProductCard
-              slug="jabon-liquido"
-              name="Jabón Líquido"
-              image="/brand-assets/Mockups/CasaElaria_MockUps_Packaging_botella-jabon-liquido.jpg"
-              description="Limpieza suave de la oliva. Hidrata y protege tu piel naturalmente."
-              onAddToCart={handlePurchase}
-            />
-            <ProductCard
-              slug="shower-oil"
-              name="Aceite limpiador para ducha"
-              image="/product-assets/shower-oil/Shower oil.png"
-              description="Experiencia de baño lujosa. Nutre profundamente mientras limpia."
-              onAddToCart={handlePurchase}
-            />
-            <ProductCard
-              slug="jabon-en-barra"
-              name="Jabón en Barra"
-              image="/product-assets/jabon-barra/Caja de jabones.png"
-              description="Tradición artesanal. Jabón sólido con todos los beneficios de la oliva."
-              onAddToCart={handlePurchase}
-            />
+            {products.map((product) => (
+              <ProductCard
+                key={product.id}
+                slug={product.slug}
+                name={product.name}
+                image={product.image}
+                description={product.shortDescription}
+                onAddToCart={handlePurchase}
+              />
+            ))}
           </div>
         </div>
       </section>

@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "slug": "jabon-liquido",
+      "name": "Jabón Líquido",
+      "price": "$30.000",
+      "image": "/product-assets/jabon-liquido/1.jpg",
+      "gallery": [],
+      "description": "Nuestro Jabón Líquido combina la suavidad de la limpieza tradicional con los beneficios nutritivos de la oliva sanjuanina. Formulado especialmente para el cuidado diario, respeta el pH natural de tu piel mientras la limpia profundamente.",
+      "shortDescription": "Limpieza suave de la oliva. Hidrata y protege tu piel naturalmente.",
+      "benefits": [
+        "Hidratación profunda sin sensación grasa",
+        "Apto para todo tipo de piel, incluyendo piel sensible",
+        "Formulación 100% natural y vegana",
+        "Libre de sulfatos y parabenos",
+        "Enriquecido con antioxidantes naturales"
+      ],
+      "shortBenefits": [
+        "Hidratación profunda",
+        "Apto para piel sensible",
+        "100% natural"
+      ],
+      "ingredients": "Oliva virgen extra, agua destilada, hidróxido de potasio, glicerina vegetal, aceites esenciales naturales.",
+      "howToUse": "Aplicar una pequeña cantidad en las manos húmedas, generar espuma suave y aplicar sobre la piel. Enjuagar con agua tibia. Para mejores resultados, usar diariamente.",
+      "size": "250ml"
+    },
+    {
+      "id": 2,
+      "slug": "shower-oil",
+      "name": "Aceite limpiador para ducha",
+      "price": "$40.000",
+      "image": "/product-assets/shower-oil/Shower oil.png",
+      "gallery": ["/product-assets/shower-oil/Shower oil.png"],
+      "description": "Una experiencia de baño transformadora que convierte tu rutina diaria en un ritual de bienestar. Nuestro Aceite limpiador para ducha nutre intensamente la piel mientras la limpia, dejándola sedosa y perfumada.",
+      "shortDescription": "Experiencia de baño lujosa. Nutre profundamente mientras limpia.",
+      "benefits": [
+        "Nutrición intensa para piel muy seca",
+        "Experiencia sensorial única y relajante",
+        "Textura sedosa que se absorbe rápidamente",
+        "Aroma natural y envolvente",
+        "No deja sensación oleosa en la piel"
+      ],
+      "shortBenefits": [
+        "Nutrición intensa",
+        "Experiencia sensorial",
+        "Textura sedosa"
+      ],
+      "ingredients": "Oliva virgen extra, aceites vegetales seleccionados, vitamina E, extractos botánicos, aceites esenciales.",
+      "howToUse": "Aplicar sobre la piel húmeda durante la ducha, masajear suavemente y enjuagar. El aceite se emulsiona en contacto con el agua para una limpieza perfecta.",
+      "size": "200ml"
+    },
+    {
+      "id": 3,
+      "slug": "jabon-en-barra",
+      "name": "Jabón en Barra",
+      "price": "$35.000",
+      "image": "/product-assets/jabon-barra/Caja de jabones.png",
+      "gallery": [
+        "/product-assets/jabon-barra/Jabon 1.png",
+        "/product-assets/jabon-barra/Jabon 2.png",
+        "/product-assets/jabon-barra/Jabon 3.png"
+      ],
+      "description": "Elaborado siguiendo técnicas artesanales tradicionales, nuestro Jabón en Barra representa la esencia pura del cuidado natural. Cada barra es única y contiene toda la riqueza de la oliva sanjuanina.",
+      "shortDescription": "Tradición artesanal. Jabón sólido con todos los beneficios de la oliva.",
+      "benefits": [
+        "Elaboración 100% artesanal y tradicional",
+        "Larga duración y rendimiento superior",
+        "Proceso de saponificación en frío",
+        "Origen completamente sustentable",
+        "Envase biodegradable",
+        "Nuestro jabón en barra no es solo belleza exterior. Está formulado para acompañar el cuidado de tu piel con cada uso: Hidrata, calma, exfolia suavemente y ayuda a atenuar manchas. Ideal para pieles sensibles o secas, y perfecto para usar todos los días."
+      ],
+      "shortBenefits": [
+        "Elaboración artesanal",
+        "Larga duración",
+        "Origen sustentable"
+      ],
+      "ingredients": "Oliva virgen extra, agua, hidróxido de sodio, glicerina natural, sal marina, hierbas aromáticas.",
+      "howToUse": "Humedecer la barra y frotar suavemente sobre la piel hasta generar espuma cremosa. Masajear y enjuagar con agua. Conservar en lugar seco entre usos.",
+      "size": "100g"
+    }
+  ]
+}

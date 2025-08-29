@@ -6,80 +6,8 @@ import { notFound } from "next/navigation";
 import { useState, use } from "react";
 import PurchaseModal from "../../components/PurchaseModal";
 import ImageLightbox from "../../components/ImageLightbox";
+import { getProductBySlug, getAllProducts } from "@/lib/products";
 
-const products = [
-  {
-    id: 1,
-    slug: "jabon-liquido",
-    name: "Jabón Líquido",
-    price: "$30.000",
-    image: "/product-assets/jabon-liquido/1.jpg",
-    gallery: [],
-    description:
-      "Nuestro Jabón Líquido combina la suavidad de la limpieza tradicional con los beneficios nutritivos de la oliva sanjuanina. Formulado especialmente para el cuidado diario, respeta el pH natural de tu piel mientras la limpia profundamente.",
-    benefits: [
-      "Hidratación profunda sin sensación grasa",
-      "Apto para todo tipo de piel, incluyendo piel sensible",
-      "Formulación 100% natural y vegana",
-      "Libre de sulfatos y parabenos",
-      "Enriquecido con antioxidantes naturales",
-    ],
-    ingredients:
-      "Oliva virgen extra, agua destilada, hidróxido de potasio, glicerina vegetal, aceites esenciales naturales.",
-    howToUse:
-      "Aplicar una pequeña cantidad en las manos húmedas, generar espuma suave y aplicar sobre la piel. Enjuagar con agua tibia. Para mejores resultados, usar diariamente.",
-    size: "250ml",
-  },
-  {
-    id: 2,
-    slug: "shower-oil",
-    name: "Aceite limpiador para ducha",
-    price: "$40.000",
-    image: "/product-assets/shower-oil/Shower oil.png",
-    gallery: ["/product-assets/shower-oil/Shower oil.png"],
-    description:
-      "Una experiencia de baño transformadora que convierte tu rutina diaria en un ritual de bienestar. Nuestro Aceite limpiador para ducha nutre intensamente la piel mientras la limpia, dejándola sedosa y perfumada.",
-    benefits: [
-      "Nutrición intensa para piel muy seca",
-      "Experiencia sensorial única y relajante",
-      "Textura sedosa que se absorbe rápidamente",
-      "Aroma natural y envolvente",
-      "No deja sensación oleosa en la piel",
-    ],
-    ingredients:
-      "Oliva virgen extra, aceites vegetales seleccionados, vitamina E, extractos botánicos, aceites esenciales.",
-    howToUse:
-      "Aplicar sobre la piel húmeda durante la ducha, masajear suavemente y enjuagar. El aceite se emulsiona en contacto con el agua para una limpieza perfecta.",
-    size: "200ml",
-  },
-  {
-    id: 3,
-    slug: "jabon-en-barra",
-    name: "Jabón en Barra",
-    price: "$35.000",
-    image: "/product-assets/jabon-barra/Caja de jabones.png",
-    gallery: [
-      "/product-assets/jabon-barra/Jabon 1.png",
-      "/product-assets/jabon-barra/Jabon 2.png",
-      "/product-assets/jabon-barra/Jabon 3.png",
-    ],
-    description:
-      "Elaborado siguiendo técnicas artesanales tradicionales, nuestro Jabón en Barra representa la esencia pura del cuidado natural. Cada barra es única y contiene toda la riqueza de la oliva sanjuanina.",
-    benefits: [
-      "Elaboración 100% artesanal y tradicional",
-      "Larga duración y rendimiento superior",
-      "Proceso de saponificación en frío",
-      "Origen completamente sustentable",
-      "Envase biodegradable",
-      "Nuestro jabón en barra no es solo belleza exterior. Está formulado para acompañar el cuidado de tu piel con cada uso: Hidrata, calma, exfolia suavemente y ayuda a atenuar manchas. Ideal para pieles sensibles o secas, y perfecto para usar todos los días.",
-    ],
-    ingredients:
-      "Oliva virgen extra, agua, hidróxido de sodio, glicerina natural, sal marina, hierbas aromáticas.",
-    howToUse:
-      "Humedecer la barra y frotar suavemente sobre la piel hasta generar espuma cremosa. Masajear y enjuagar con agua. Conservar en lugar seco entre usos.",
-    size: "100g",
-  },
-];
 
 export default function ProductDetailPage({
   params,
@@ -90,7 +18,8 @@ export default function ProductDetailPage({
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const { slug } = use(params);
-  const product = products.find((p) => p.slug === slug);
+  const product = getProductBySlug(slug);
+  const products = getAllProducts();
 
   if (!product) {
     notFound();
@@ -334,7 +263,7 @@ export default function ProductDetailPage({
                       </span>
                     </div>
                     <p className="text-olive-primary/80 text-sm mb-4">
-                      {relatedProduct.description.slice(0, 100)}...
+                      {relatedProduct.shortDescription.slice(0, 100)}...
                     </p>
                     <Link
                       href={`/productos/${relatedProduct.slug}`}

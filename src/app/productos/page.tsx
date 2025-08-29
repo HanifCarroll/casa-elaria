@@ -6,47 +6,13 @@ import { useState } from "react";
 import PurchaseModal from "../components/PurchaseModal";
 import PageHeader from "../components/PageHeader";
 import ProductCard from "../components/ProductCard";
+import { getAllProducts } from "@/lib/products";
 
-const products = [
-  {
-    id: 1,
-    slug: "jabon-liquido",
-    name: "Jabón Líquido",
-    price: "$30.000",
-    image: "/product-assets/jabon-liquido/1.jpg",
-    description:
-      "Limpieza suave de la oliva. Hidrata y protege tu piel naturalmente.",
-    benefits: [
-      "Hidratación profunda",
-      "Apto para piel sensible",
-      "100% natural",
-    ],
-  },
-  {
-    id: 2,
-    slug: "shower-oil",
-    name: "Aceite limpiador para ducha",
-    price: "$40.000",
-    image: "/product-assets/shower-oil/Shower oil.png",
-    description:
-      "Experiencia de baño lujosa. Nutre profundamente mientras limpia.",
-    benefits: ["Nutrición intensa", "Experiencia sensorial", "Textura sedosa"],
-  },
-  {
-    id: 3,
-    slug: "jabon-en-barra",
-    name: "Jabón en Barra",
-    price: "$35.000",
-    image: "/product-assets/jabon-barra/Jabon 2.png",
-    description:
-      "Tradición artesanal. Jabón sólido con todos los beneficios de la oliva.",
-    benefits: ["Elaboración artesanal", "Larga duración", "Origen sustentable"],
-  },
-];
 
 export default function ProductosPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<string>("");
+  const products = getAllProducts();
 
   const handlePurchase = (productName: string) => {
     setSelectedProduct(productName);
@@ -71,8 +37,8 @@ export default function ProductosPage() {
                 name={product.name}
                 image={product.image}
                 price={product.price}
-                description={product.description}
-                benefits={product.benefits}
+                description={product.shortDescription}
+                benefits={product.shortBenefits}
                 onAddToCart={handlePurchase}
               />
             ))}
