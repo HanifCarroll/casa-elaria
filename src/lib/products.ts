@@ -14,6 +14,7 @@ export interface Product {
   ingredients: string;
   howToUse: string;
   size: string;
+  imagePosition: string;
 }
 
 export const products: Product[] = productsData.products;

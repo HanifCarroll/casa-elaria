@@ -40,6 +40,7 @@ export default function Home() {
                 slug={product.slug}
                 name={product.name}
                 image={product.image}
+                imagePosition={product.imagePosition}
                 description={product.shortDescription}
                 onAddToCart={handlePurchase}
               />

@@ -8,6 +8,7 @@ export interface ProductCardProps {
   slug: string;
   name: string;
   image: string;
+  imagePosition?: string;
   price?: string;
   description?: string;
   benefits?: string[];
@@ -18,6 +19,7 @@ export default function ProductCard({
   slug,
   name,
   image,
+  imagePosition = "center center",
   price,
   description,
   benefits,
@@ -53,6 +55,7 @@ export default function ProductCard({
           alt={name}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-700"
+          style={{ objectPosition: imagePosition }}
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
       </div>

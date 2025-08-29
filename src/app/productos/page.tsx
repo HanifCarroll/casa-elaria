@@ -36,6 +36,7 @@ export default function ProductosPage() {
                 slug={product.slug}
                 name={product.name}
                 image={product.image}
+                imagePosition={product.imagePosition}
                 price={product.price}
                 description={product.shortDescription}
                 benefits={product.shortBenefits}
