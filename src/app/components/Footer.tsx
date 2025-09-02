@@ -62,7 +62,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/casa_elaria"
                   className="text-white/80 hover:text-gold transition-colors"
                 >
                   Instagram

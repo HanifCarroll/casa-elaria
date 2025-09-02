@@ -20,11 +20,34 @@ export default function PurchaseModal({ isOpen, onClose, productName }: Purchase
 
     setIsSubmitting(true);
     
-    // Simulate API call - in real implementation this would go to Airtable
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setShowSuccess(true);
+    try {
+      const response = await fetch('/api/capture-lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+          productName,
+          trackClickOnly: false
+        })
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to submit');
+      }
+      
+      const data = await response.json();
+      console.log('Lead captured:', data);
+      
+      setShowSuccess(true);
+    } catch (error) {
+      console.error('Error submitting email:', error);
+      // Still show success to user to maintain conversion flow
+      setShowSuccess(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleClose = () => {
@@ -38,7 +61,7 @@ export default function PurchaseModal({ isOpen, onClose, productName }: Purchase
     }
   };
 
-  // Handle ESC key
+  // Handle ESC key and track click
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) {
@@ -49,6 +72,18 @@ export default function PurchaseModal({ isOpen, onClose, productName }: Purchase
     if (isOpen) {
       document.addEventListener('keydown', handleEsc);
       setIsVisible(true);
+      
+      // Track click when modal opens (user clicked "Comprar")
+      fetch('/api/capture-lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          trackClickOnly: true,
+          productName
+        })
+      }).catch(err => console.error('Failed to track click:', err));
     }
 
     return () => {
