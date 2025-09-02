@@ -38,7 +38,15 @@ async function fetchData(): Promise<StorageData> {
 
     if (response.ok) {
       const data = await response.json();
-      return data.record;
+      const record = data.record;
+      
+      // Fix data structure if leads is not an array
+      if (!Array.isArray(record.leads)) {
+        console.warn('Fixing leads data structure from object to array');
+        record.leads = [];
+      }
+      
+      return record;
     }
   } catch (error) {
     console.error('Error fetching from JSONBin:', error);
