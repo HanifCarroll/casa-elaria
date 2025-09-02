@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import Clarity from "@microsoft/clarity";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
-Clarity.init("t4p7xwzuf0");
+import ClarityAnalytics from "./components/ClarityAnalytics";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -31,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${playfair.variable} ${inter.variable} antialiased`}>
+        <ClarityAnalytics />
         <Header />
         {children}
         <Footer />
