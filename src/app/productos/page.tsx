@@ -2,22 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import PurchaseModal from "../components/PurchaseModal";
 import PageHeader from "../components/PageHeader";
 import ProductCard from "../components/ProductCard";
 import { getAllProducts } from "@/lib/products";
 
 
 export default function ProductosPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState<string>("");
   const products = getAllProducts();
-
-  const handlePurchase = (productName: string) => {
-    setSelectedProduct(productName);
-    setIsModalOpen(true);
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -40,7 +31,6 @@ export default function ProductosPage() {
                 price={product.price}
                 description={product.shortDescription}
                 benefits={product.shortBenefits}
-                onAddToCart={handlePurchase}
               />
             ))}
           </div>
@@ -154,12 +144,6 @@ export default function ProductosPage() {
           </div>
         </div>
       </section>
-
-      <PurchaseModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        productName={selectedProduct}
-      />
     </div>
   );
 }
