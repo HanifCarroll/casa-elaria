@@ -1,20 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import HeroSlider from "./components/HeroSlider";
-import PurchaseModal from "./components/PurchaseModal";
 import ProductCard from "./components/ProductCard";
 import { getAllProducts } from "@/lib/products";
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState<string>("");
   const products = getAllProducts();
-
-  const handlePurchase = (productName: string) => {
-    setSelectedProduct(productName);
-    setIsModalOpen(true);
-  };
 
   return (
     <div className="min-h-screen">
@@ -39,10 +30,10 @@ export default function Home() {
                 key={product.id}
                 slug={product.slug}
                 name={product.name}
+                price={product.price}
                 image={product.image}
                 imagePosition={product.imagePosition}
                 description={product.shortDescription}
-                onAddToCart={handlePurchase}
               />
             ))}
           </div>
@@ -149,12 +140,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <PurchaseModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        productName={selectedProduct}
-      />
     </div>
   );
 }

@@ -12,7 +12,6 @@ export interface ProductCardProps {
   price?: string;
   description?: string;
   benefits?: string[];
-  onAddToCart: (productName: string) => void;
 }
 
 export default function ProductCard({
@@ -23,7 +22,6 @@ export default function ProductCard({
   price,
   description,
   benefits,
-  onAddToCart,
 }: ProductCardProps) {
   const router = useRouter();
 
@@ -31,9 +29,9 @@ export default function ProductCard({
     router.push(`/productos/${slug}`);
   };
 
-  const handleAddToCart = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleViewMore = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
-    onAddToCart(name);
+    router.push(`/productos/${slug}`);
   };
 
   return (
@@ -94,10 +92,10 @@ export default function ProductCard({
         ) : <div className="flex-1" />}
 
         <button
-          onClick={handleAddToCart}
+          onClick={handleViewMore}
           className="w-full bg-olive-primary text-white py-3 px-4 rounded-md hover:bg-olive-dark transition-colors font-medium text-sm uppercase tracking-wider cursor-pointer mt-auto"
         >
-          Agregar Al Carrito
+          Ver más
         </button>
       </div>
     </div>
