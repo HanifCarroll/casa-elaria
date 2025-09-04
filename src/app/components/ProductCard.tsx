@@ -37,7 +37,7 @@ export default function ProductCard({
   return (
     <div
       onClick={handleCardClick}
-      className="group bg-white rounded-xl overflow-hidden border border-olive-primary/10 shadow-sm hover:shadow-md transition-shadow duration-500 cursor-pointer h-full flex flex-col"
+      className="group bg-white rounded-lg overflow-hidden border border-olive-primary/10 shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer h-full flex flex-col"
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
@@ -59,15 +59,17 @@ export default function ProductCard({
       </div>
 
       <div className="p-6 flex-1 flex flex-col">
-        <div className="flex justify-between items-start mb-3">
-          <h3 className="font-serif text-xl font-bold text-olive-dark">{name}</h3>
+        <div className="after:content-[''] after:block after:w-12 after:h-[1px] after:bg-gold after:mt-4 after:mb-4">
+          <h3 className="font-serif text-2xl font-light text-olive-dark mb-2 tracking-wide">{name}</h3>
           {price ? (
-            <span className="text-lg font-medium text-olive-primary">{price}</span>
+            <div className="flex items-baseline gap-1">
+              <span className="text-xl font-light text-olive-dark tracking-wide">{price}</span>
+            </div>
           ) : null}
         </div>
 
         {description ? (
-          <p className="text-olive-primary/80 text-sm mb-4 leading-relaxed">{description}</p>
+          <p className="text-olive-primary/70 text-sm mb-6 leading-relaxed tracking-wide font-light">{description}</p>
         ) : null}
 
         {benefits && benefits.length > 0 ? (
@@ -93,7 +95,7 @@ export default function ProductCard({
 
         <button
           onClick={handleViewMore}
-          className="w-full bg-olive-primary text-white py-3 px-4 rounded-md hover:bg-olive-dark transition-colors font-medium text-sm uppercase tracking-wider cursor-pointer mt-auto"
+          className="w-full bg-olive-dark text-white py-4 px-6 rounded-md hover:bg-olive-primary transition-all duration-300 font-light text-sm uppercase tracking-[0.2em] cursor-pointer mt-auto group-hover:shadow-lg"
         >
           Ver más
         </button>
